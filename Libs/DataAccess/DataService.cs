@@ -18,7 +18,7 @@ namespace DataAccess
                 throw new ArgumentNullException(nameof(dbConnectionFactory));
         }
 
-        public T Create<T>() where T : BaseModel, new() => default;
+        public T Create<T>() where T : BaseModel, new() => new T();
 
         public T Show<T>(int id) where T : BaseModel
         {
